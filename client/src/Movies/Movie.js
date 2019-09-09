@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import MovieCard from "./Movie"
 
 const Movie = (props) => {
   const [movie, setMovie] = useState({});
- 
+  console.log(props)
   const id = props.match.params.id;
   useEffect(() => {
     
@@ -55,6 +56,12 @@ const Movie = (props) => {
         ))}
       </div>
       <div className="save-button">Save</div>
+      {/* <MovieCard 
+      title={title} 
+      director = {director} 
+      metascore = {metascore}
+      stars = {stars}
+      /> */}
     </div>
   );
 }
